@@ -14,4 +14,5 @@
 2. 将代码保存为 `generate_math_problems.py`。
 3. 在终端或命令行中运行该脚本：
    ```bash
-   python generate_math_problems.py
+   python 0to10.py
+   python 0to20.py

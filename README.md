@@ -19,7 +19,9 @@ Welcome to the Random Math Problem Generator! This project aims to provide stude
 2. Save the code as `generate_math_problems.py`.
 3. Run the script in the terminal or command line:
    ```bash
-   python generate_math_problems.py
+   python 0to10.py
+   python 0to20.py
+
 ## Formatting for Printing
 The generated files are designed for easy copying into Word. Each section contains a clear separator line and page breaks, making it simple to format for printing. To print:
 

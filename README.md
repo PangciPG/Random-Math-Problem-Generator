@@ -20,3 +20,15 @@ Welcome to the Random Math Problem Generator! This project aims to provide stude
 3. Run the script in the terminal or command line:
    ```bash
    python generate_math_problems.py
+## Formatting for Printing
+The generated files are designed for easy copying into Word. Each section contains a clear separator line and page breaks, making it simple to format for printing. To print:
+
+- Open the generated math_10.txt or math_20.txt file.
+- Copy the content.
+- Paste it into a Word document.
+- Adjust the formatting if necessary, then print.
+## Contributing
+Contributions are welcome! If you have any questions or suggestions, please submit an issue or pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.

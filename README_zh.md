@@ -11,7 +11,7 @@
 ## 使用方法
 
 1. 确保你的计算机上安装了Python。
-2. 将代码保存为 `generate_math_problems.py`。
+2. 将代码保存为 `python 0to10.py / python 0to20.py`。
 3. 在终端或命令行中运行该脚本：
    ```bash
    python 0to10.py

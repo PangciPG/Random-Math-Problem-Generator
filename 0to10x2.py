@@ -5,18 +5,38 @@ def generate_math_problems(num_problems=1000):
     last_problem = None
     for i in range(num_problems):
         while True:
-            # 随机选择加法或减法
+            # 第一次运算
             if random.choice([True, False]):
                 # 加法
-                a = random.randint(1, 9)  # 不出现0
-                b = random.randint(1, 10 - a)  # 保证和不超过10
-                problem = f"{a} + {b} = "
+                a = random.randint(1, 9)
+                b = random.randint(1, 10 - a)
+                first_part = f"{a} + {b}"
             else:
                 # 减法
-                a = random.randint(2, 10)  # 确保减法的a不小于2
-                b = random.randint(1, a - 1)  # 确保b不等于a
-                problem = f"{a} - {b} = "
-            
+                a = random.randint(2, 10)
+                b = random.randint(1, a - 1)
+                first_part = f"{a} - {b}"
+
+            # 计算第一次运算的结果
+            first_result = eval(first_part)
+
+            # 确保第一次运算的结果大于等于1，以便进行第二次运算
+            if first_result < 1 or first_result >= 10:
+                continue
+
+            # 第二次运算
+            if random.choice([True, False]):
+                # 加法
+                c = random.randint(1, 10 - first_result)
+                second_part = f" + {c}"
+            else:
+                # 减法
+                c = random.randint(1, first_result)
+                second_part = f" - {c}"
+
+            # 构建完整问题
+            problem = f"{first_part}{second_part} = "
+
             # 确保相邻的两道题不重复
             if problem != last_problem:
                 problems.append(problem)
@@ -36,7 +56,7 @@ def generate_math_problems(num_problems=1000):
 
     return problems
 
-def save_problems_to_file(problems, filename="math_10.txt"):
+def save_problems_to_file(problems, filename="math_10x2.txt"):
     with open(filename, "w", encoding="utf-8") as file:
         for problem in problems:
             file.write(problem + "\n")
@@ -44,4 +64,4 @@ def save_problems_to_file(problems, filename="math_10.txt"):
 if __name__ == "__main__":
     math_problems = generate_math_problems()
     save_problems_to_file(math_problems)
-    print(f"{len(math_problems)}道数学题已生成并保存到文件 'math_10.txt'。")
+    print(f"{len(math_problems)}道数学题已生成并保存到文件 'math_10x2.txt'。")

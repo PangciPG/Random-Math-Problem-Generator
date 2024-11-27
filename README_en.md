@@ -13,12 +13,15 @@ This project is a simple random math problem generator that can generate additio
 - Generates a specified number of random addition and subtraction problems.
 - Adds a separator line every 10 problems for easy viewing.
 - Adds a Word-compatible page break every 100 problems for easy printing.
+- Adds x2 which means multi-problems like: `3+6-2=___`
 
 ## Usage
 
 1. Ensure that Python is installed on your computer.
 2. Save the code as `python 0to10.py / python 0to20.py`.
 3. Run the script in the terminal or command line:
-   ```bash
+   ```shell
    python 0to10.py
    python 0to20.py
+   python ...
+   ```
